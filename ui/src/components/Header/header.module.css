@@ -6,27 +6,30 @@
 
 .menuButtons {
     display: flex;
-    width: 50%;
-    justify-content: center;
-    height: 10%;
+    justify-content: space-between;
+    width: 61.7%;
 }
 
 .profile {
     display: flex;
-    width: 30%;
     justify-content: flex-end;
 }
 
 .mainContent {
     display: flex;
-    width: 100%;
+    justify-content: space-between;
     margin-top: 15px;
     margin-bottom: 15px;
+    min-width: 500px;
 }
 
 .logo {
-    width: 20%;
     margin-left: 5px;
+}
+
+.logoContainer {
+    display:flex;
+    width: 10%;
 }
 
 .notActive {
@@ -47,4 +50,82 @@
     background-color: #33cc33;
     border-radius: 50%;
     display: inline-block;
+}
+
+.hamburger {
+    display: none;
+}
+
+.burger {
+    width: 2rem;
+    height: 0.25rem;
+    border-radius: 10px;
+    background-color: black;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+}
+
+.offMenuButtons {
+    display: flex;
+    justify-content: center;
+}
+.offProfile {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menuButtonContainer {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+    .hamburger {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        z-index: 10;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    .burger {
+        width: 2rem;
+        height: 0.25rem;
+        border-radius: 10px;
+        background-color: black;
+        transform-origin: 1px;
+        transition: all 0.3s linear;
+    }
+
+    .mainContent {
+        display: flex;
+        min-width: auto;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .menuButtons {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+        text-align: end;
+    }
+
+    .offMenuButtons {
+        display: none;
+    }
+
+    .offProfile {
+        display: none;
+    }
+
+    .menuButtonContainer {
+        display: contents;
+    }
+
 }

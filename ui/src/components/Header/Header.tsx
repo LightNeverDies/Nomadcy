@@ -11,27 +11,31 @@ class Header extends React.Component <any, any> {
         this.state = {
             buttonText: ['Overview', 'Score Details', 'Recommendations', 'Resources'],
             accountSettings: 'Profile & Settings',
-            activeButton: 0
+            activeButton: 0,
+            burgerUsed: 0
         }
+    }
+
+    componentWillUnmount = () => {
+        this.setState({ burgerUsed: 0 })
     }
 
     menuButtons = () => {
         return (
-            <>
+            <div className={style.menuButtonContainer}>
                 {this.state.buttonText.map((element: any, index: number) => {
                     return (
-                        <nav key={index}>
+                        <div key={index}>
                             <Button
                             onClick={() => this.setState({ activeButton: index})} 
                             id={index} 
                             active={this.state.activeButton === index ? true : false} 
                             text={element}
                             />
-                        </nav> 
+                        </div> 
                     )
                 })}
-            </>
-
+            </div>
         )
     }
 
@@ -50,16 +54,55 @@ class Header extends React.Component <any, any> {
         switch(type) {
             case 'apple':
                 return (
-                    <Apple/>
+                    <nav className={style.logo}>
+                        <Apple/>
+                    </nav>
+
                 )
             case 'google':
                 return (
-                    <Google/>
+                    <nav className={style.logo}>
+                        <Google/>
+                    </nav>
                 )
             default:
                 return (
-                <Apple/>
+                    <nav className={style.logo}>
+                        <Apple/>
+                    </nav>
                 )
+        }
+    }
+
+    openMenu = () => {
+        if(this.state.burgerUsed === 1) {
+            this.setState({ burgerUsed: 0 })
+        } else {
+            this.setState({ burgerUsed: 1 })
+        }
+    }
+
+    renderMenu = () => {
+        if(this.state.burgerUsed === 1) {
+            return (
+                <div className={style.menuButtons}>
+                    {this.menuButtons()}
+                    <nav>
+                        {this.profileButton()}
+                    </nav>
+                </div>
+            )
+        } else if( this.state.burgerUsed === 0) {
+            return (
+                <>
+                   <nav className={style.offMenuButtons}>
+                    {this.menuButtons()}
+                   </nav>
+                    <div className={style.offProfile}>
+                    {this.profileButton()}
+                    </div>
+                </>
+            )
         }
     }
 
@@ -68,17 +111,19 @@ class Header extends React.Component <any, any> {
             <>
                 <div className={style.line}/>
                 <div className={style.mainContent}>
-                    <nav className={this.props.status == true ? style.onActive : style.notActive}/>
-                    <nav className={style.logo}>
+                    <div className={style.logoContainer}>
+                        <nav className={this.props.status == true ? style.onActive : style.notActive}/> 
                         {this.logoRender(this.props.type)}
-                    </nav>
-                    <nav className={style.menuButtons}>
-                        {this.menuButtons()}
-                    </nav>
-                    <nav className={style.profile}>
-                        {this.profileButton()}
-                    </nav>
+                    </div>
+                    {this.renderMenu()}
+                    <div className={style.hamburger} onClick={() => this.openMenu()}>
+                        <div className={style.burger}/>
+                        <div className={style.burger}/>
+                        <div className={style.burger}/>
+                    </div>
+
                 </div>
+
                 <div className={style.line}/>
             </>
             
