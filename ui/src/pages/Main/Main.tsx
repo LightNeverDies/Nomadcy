@@ -14,10 +14,6 @@ class Main extends React.Component <any, any> {
     await this.props.appChecker()
   }
 
-  checkApi = () => {
-
-  }
-
   render() {
       return (
       <>
