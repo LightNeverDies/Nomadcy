@@ -1,7 +1,7 @@
 {
   "name": "Project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nomadcy Project",
   "main": "index.js",
   "scripts": {
     "run-service": "cd service && npm start",
@@ -16,7 +16,7 @@
     "url": "git+https://github.com/LightNeverDies/Nomadcy.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Georgi Georgiev",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LightNeverDies/Nomadcy/issues"
