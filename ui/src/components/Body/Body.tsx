@@ -31,18 +31,21 @@ class Body extends React.Component <any, any> {
 
     render() {
         return (
-            <div style={{ display: 'flex'}}>
+            <div className={style.container}>
                 <div className={style.sides}/>
-                <div className={style.bodyLeftStyle}>
-                    <BodyTitle text={this.state.bodyTitle[0]}/>
-                    <BarCharts/>
-                    <BodyTitle text={this.state.bodyTitle[1]}/>
-                    <Donut/>
+                <div className={style.innerContainer}>
+                    <div className={style.bodyLeftStyle}>
+                        <BodyTitle text={this.state.bodyTitle[0]}/>
+                        <BarCharts/>
+                        <BodyTitle text={this.state.bodyTitle[1]}/>
+                        <Donut/>
+                    </div>
+                    <div className={style.bodyRigthStyle}>
+                        <RectBox/>
+                        <InfoSection/>
+                    </div>
                 </div>
-                <div className={style.bodyRigthStyle}>
-                    <RectBox/>
-                    <InfoSection/>
-                </div>
+
                 <div className={style.sides}/>
             </div>
         )
