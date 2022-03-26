@@ -1,0 +1,59 @@
+.field {
+    width: 65%;
+    margin-top: 15%;
+    text-align: center;
+    height: 45%;
+    border: 4px solid #ff7f63;
+    border-radius: 10%;
+}
+
+.textStyle {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.columnButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.verticalLine {
+    border-left: 6px solid #ff7f63;
+    height: auto;
+}
+
+.buttonStyle {
+    width: 100%;
+    border: none;
+    font-size: 25px;
+    background-color: transparent;
+    margin: 25px 5px 10px 0px;
+    display: flex;
+}
+
+.textFooter {
+    width: 100%;
+    font-size: 29px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.columnContainer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 60%;
+    margin-top: 20px;
+}
+
+.imageContainer {
+    margin: 0px 5px 0px 5px
+}
+
+.triangleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 10px 0px 10px;
+}

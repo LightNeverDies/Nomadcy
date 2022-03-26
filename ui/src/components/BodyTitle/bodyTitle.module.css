@@ -1,0 +1,21 @@
+.bodyTitle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1%;
+    align-items: center;
+}
+
+.divLine {
+    height: 4px;
+    background: black;
+    border-top: 1px solid #fff;
+    width: 45%;
+    margin: 10px;
+}
+
+.text {
+    height: 10px;
+    margin: 5px 10px 0px 14px;
+    font-weight: bold;
+}

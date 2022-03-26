@@ -1,0 +1,50 @@
+.line {
+ height: 5px;
+ background: black;
+ border-top: 1px solid #fff;
+}
+
+.menuButtons {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    height: 10%;
+}
+
+.profile {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+}
+
+.mainContent {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 20%;
+    margin-left: 5px;
+}
+
+.notActive {
+    height: 14px;
+    width: 14px;
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.onActive {
+    height: 14px;
+    width: 14px;
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: #33cc33;
+    border-radius: 50%;
+    display: inline-block;
+}

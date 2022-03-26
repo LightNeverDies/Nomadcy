@@ -1,0 +1,22 @@
+{
+  "name": "Project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-service": "cd service && npm start",
+    "run-ui": "cd ui && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LightNeverDies/Nomadcy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LightNeverDies/Nomadcy/issues"
+  },
+  "homepage": "https://github.com/LightNeverDies/Nomadcy#readme",
+  "dependencies": {}
+}
