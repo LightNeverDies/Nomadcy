@@ -35,7 +35,6 @@ export const Text: any = styled.div<any>`
 `;
 
 export const Container: any = styled.div<any>`
-  width: 50%;
   text-align: center;
   margin-top: 20px;
 `

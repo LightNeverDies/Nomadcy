@@ -6,7 +6,7 @@ export const InfoSectionContainer: any = styled.div `
 `
 
 export const Title: any = styled.div`
-    width: 60%;
+    width: 49%;
     font-size: 35px;
     margin-bottom: 10px;
     font-weight: bold;
