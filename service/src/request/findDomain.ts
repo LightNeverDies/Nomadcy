@@ -30,9 +30,6 @@ const findDomain = (req: any, res: any) => {
         })
     }
 
-
-    // need to fix here should be color: '#000000', number: 666
-
     const values = names.map((key: any, i: any) => {
             return {
                 color: colors[i],
