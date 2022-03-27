@@ -40,6 +40,7 @@
     background-color: red;
     border-radius: 50%;
     display: inline-block;
+    min-width: 14px;
 }
 
 .onActive {
@@ -50,6 +51,7 @@
     background-color: #33cc33;
     border-radius: 50%;
     display: inline-block;
+    min-width: 14px;
 }
 
 .hamburger {
@@ -126,6 +128,11 @@
 
     .menuButtonContainer {
         display: contents;
+    }
+    
+    .logoContainer{
+        display: flex;
+        width: 30%;
     }
 
 }
