@@ -1,5 +1,5 @@
 # Nomadcy Project
-# Steps For Running The Project
+# Steps For Setup The Project
 1. **npm install**
 2. Project can be build in different ways:<br />
  - Only for UI: **npm run build-ui**<br />
